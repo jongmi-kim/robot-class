@@ -51,8 +51,8 @@ const UploadWorkForm: React.FC<UploadWorkFormProps> = ({ selectedClass }) => {
            {theme.title} 로봇 갤러리 📸
         </h2>
         <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-          로그인 없이 편하게 사진을 올릴 수 있어요.<br/>
-          친구들이 만든 멋진 로봇 작품에 <span className="text-red-500 font-bold">하트❤️</span>를 눌러주세요!
+          로그인 없이 사진올리기!.<br/>
+          친구들의 멋진 로봇 작품에 <span className="text-red-500 font-bold">하트❤️</span> 누르기!
         </p>
       </div>
 
