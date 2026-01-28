@@ -1,0 +1,8 @@
+{
+  "name": "RobotClass - Elementary Robot Creator",
+  "description": "A responsive, friendly educational website for an elementary after-school robot class. Features schedule management, curriculum display, and part purchase requests.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

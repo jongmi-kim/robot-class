@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로봇창의부 방과후 교실</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: '#1e293b',
+                900: '#0f172a', // Main Sidebar Color
+                950: '#020617',
+              },
+              brand: {
+                50: '#fffbeb',
+                100: '#fef3c7',
+                400: '#fbbf24', // Amber/Yellow (Main Brand Color)
+                500: '#f59e0b',
+                600: '#d97706',
+              },
+              green: {
+                 50: '#f0fdf4',
+                 100: '#dcfce7',
+                 400: '#4ade80',
+                 500: '#22c55e',
+                 600: '#16a34a',
+                 700: '#15803d',
+              },
+              accent: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0ea5e9', // Sky Blue for secondary accents
+                600: '#0284c7',
+              }
+            },
+            fontFamily: {
+              sans: ['"Pretendard"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+              display: ['"Pretendard"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* 
+         [반응형 사이즈 자동 조절 시스템]
+         기기의 화면 크기에 따라 기준 폰트 사이즈(rem)를 자동으로 변경합니다.
+         Tailwind의 모든 단위(p-4, text-lg 등)는 이 기준 사이즈에 비례하여 자동으로 커지거나 작아집니다.
+      */
+      html {
+        font-size: 16px; /* 모바일 (기본): 표준 사이즈로 작게 시작하여 좁은 화면 대응 */
+      }
+      
+      @media (min-width: 768px) {
+        html {
+          font-size: 18px; /* 태블릿: 중간 사이즈 */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        html {
+          font-size: 20px; /* 데스크탑: 시원시원하게 큰 사이즈 (기존 설정) */
+        }
+      }
+
+      body {
+        font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      }
+      h1, h2, h3, h4, .font-display {
+        font-family: "Pretendard", sans-serif;
+        letter-spacing: -0.02em;
+      }
+    </style>
+
+
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 text-gray-800">
+    <div id="root"></div>
+    <!-- 리액트 앱의 시작점(Entry Point)을 지정해줍니다. -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
