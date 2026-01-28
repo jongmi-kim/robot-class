@@ -156,7 +156,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ selectedClass }) =>
   return (
     <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
       <div className="text-center">
-        <h2 className="text-6xl font-display font-bold text-gray-800 mb-6">로봇창의반 상담 요청</h2>
+        <h2 className="text-5xl font-display font-bold text-gray-800 mb-6">로봇창의반 상담요청</h2>
       </div>
 
       {/* Info Banner with Direct Link */}
