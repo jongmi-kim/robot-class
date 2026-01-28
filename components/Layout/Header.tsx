@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
                     className={`px-6 py-3 rounded-2xl text-lg font-bold transition-all
                         ${selectedClass === 'MW' 
                             ? 'bg-brand-400 text-navy-900 shadow-md transform scale-105' 
-                            : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
+                            : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                         }
                     `}
                 >
@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
                     className={`px-6 py-3 rounded-2xl text-lg font-bold transition-all
                         ${selectedClass === 'TT' 
                             ? 'bg-green-500 text-white shadow-md transform scale-105' 
-                            : 'bg-gray-100 text-gray-600 hover:bg-gray-400'
+                            : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                         }
                     `}
                 >
