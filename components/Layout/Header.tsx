@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
             <div className="w-8 h-8 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-bold text-xs">
                 T
             </div>
-            <span className="text-sm font-bold text-gray-600">선생님</span>
+            <span className="text-sm font-bold text-gray-600">로봇쌤</span>
         </div>
       </div>
     </header>
