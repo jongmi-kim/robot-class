@@ -20,16 +20,16 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
           <Menu size={28} />
         </button>
         
-        <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 overflow-hidden">
-            <h1 className="font-display text-2xl md:text-3xl font-bold text-navy-900 whitespace-nowrap">{title}</h1>
+        <div className="flex flex-row items-center gap-3 md:gap-4 overflow-hidden">
+            <h1 className="font-display text-2xl md:text-3xl font-bold text-navy-900 whitespace-nowrap shrink-0">{title}</h1>
             
-            <div className="flex items-center gap-2 md:ml-2 mb-2 md:mb-0">
+            <div className="flex items-center gap-2 shrink-0">
                 <button 
                     onClick={() => setSelectedClass('MW')}
-                    className={`px-6 py-3 rounded-lg text-lg font-bold transition-all
+                    className={`px-6 py-3 rounded-2xl text-lg font-bold transition-all
                         ${selectedClass === 'MW' 
-                            ? 'bg-brand-400 text-navy-900 shadow-sm' 
-                            : 'bg-gray-200 text-gray-400 hover:bg-gray-200'
+                            ? 'bg-brand-400 text-navy-900 shadow-md transform scale-105' 
+                            : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
                         }
                     `}
                 >
@@ -37,10 +37,10 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
                 </button>
                 <button 
                     onClick={() => setSelectedClass('TT')}
-                    className={`px-6 py-3 rounded-lg text-lg font-bold transition-all
+                    className={`px-6 py-3 rounded-2xl text-lg font-bold transition-all
                         ${selectedClass === 'TT' 
-                            ? 'bg-green-500 text-white shadow-sm' 
-                            : 'bg-gray-200 text-gray-400 hover:bg-gray-200'
+                            ? 'bg-green-500 text-white shadow-md transform scale-105' 
+                            : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
                         }
                     `}
                 >
