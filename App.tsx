@@ -65,6 +65,7 @@ const App: React.FC = () => {
           title={getPageTitle(currentPage)}
           toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
           selectedClass={selectedClass}
+          setSelectedClass={setSelectedClass}
         />
 
         <main className="flex-1 overflow-y-auto p-6 md:p-10 scroll-smooth">
