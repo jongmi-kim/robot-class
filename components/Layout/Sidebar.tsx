@@ -127,10 +127,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Footer info */}
         <div className="p-6 border-t border-navy-800 mt-auto">
-            <button className="w-full flex items-center justify-center gap-2 py-3 border border-navy-700 rounded-xl text-gray-400 hover:text-white hover:border-gray-500 transition-colors text-sm font-medium">
-                <Settings size={16} />
-                관리자 모드
-            </button>
+            
             <p className="mt-4 text-center text-xs text-gray-600">
                 © 2026 Robot Creativity Lab
             </p>
