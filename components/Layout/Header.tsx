@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
       </div>
 
       <div className="flex items-center gap-4 shrink-0 pl-4">
-        <button className="p-3 bg-white rounded-full text-gray-400 hover:text-brand-500 shadow-sm hover:shadow-md transition-all">
+        <button className="hidden md:block p-3 bg-white rounded-full text-gray-400 hover:text-brand-500 shadow-sm hover:shadow-md transition-all">
             <Bell size={20} />
         </button>
         <div className="hidden md:flex items-center gap-3 bg-white pl-1 pr-4 py-1 rounded-full shadow-sm border border-gray-100">
