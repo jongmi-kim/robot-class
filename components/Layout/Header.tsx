@@ -26,10 +26,10 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
             <div className="flex items-center gap-2 md:ml-2 mb-2 md:mb-0">
                 <button 
                     onClick={() => setSelectedClass('MW')}
-                    className={`px-6 py-3 rounded-lg text-sm font-bold transition-all
+                    className={`px-6 py-3 rounded-lg text-lg font-bold transition-all
                         ${selectedClass === 'MW' 
                             ? 'bg-brand-400 text-navy-900 shadow-sm' 
-                            : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
+                            : 'bg-gray-200 text-gray-400 hover:bg-gray-200'
                         }
                     `}
                 >
@@ -37,10 +37,10 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
                 </button>
                 <button 
                     onClick={() => setSelectedClass('TT')}
-                    className={`px-6 py-3 rounded-lg text-sm font-bold transition-all
+                    className={`px-6 py-3 rounded-lg text-lg font-bold transition-all
                         ${selectedClass === 'TT' 
                             ? 'bg-green-500 text-white shadow-sm' 
-                            : 'bg-gray-100 text-gray-400 hover:bg-gray-200'
+                            : 'bg-gray-200 text-gray-400 hover:bg-gray-200'
                         }
                     `}
                 >
