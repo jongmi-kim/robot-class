@@ -51,7 +51,7 @@ const ScheduleView: React.FC<ScheduleViewProps> = ({ selectedClass }) => {
             {selectedClass === 'MW' ? '월수반 수업일정' : '화목반 수업일정'}
           </h2>
           <p className={`${config.subTextColor} text-lg font-medium max-w-2xl`}>
-            구글 캘린더를 통해 실시간 수업 일정을 확인하세요.
+            구글 캘린더로 실시간 수업 일정을 확인하세요.
           </p>
         </div>
 
