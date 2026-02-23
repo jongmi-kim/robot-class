@@ -53,18 +53,18 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title, selectedClass, se
                     <>
                         <span className="hidden md:block w-px h-3 bg-gray-300"></span>
                         <span className="truncate">
-                           <span className="font-bold text-gray-600">1~2학년</span> 2:30~3:10
+                           <span className="font-bold text-gray-600">1~2학년</span> 2:10~3:00
                            <span className="mx-2 text-gray-300">|</span>
-                           <span className="font-bold text-gray-600">3~4학년</span> 3:20~4:10
+                           <span className="font-bold text-gray-600">3~4학년</span> 3:10~4:00
                         </span>
                     </>
                 ) : (
                     <>
                         <span className="hidden md:block w-px h-3 bg-gray-300"></span>
                         <span className="truncate">
-                           <span className="font-bold text-gray-600">1~2학년</span> 1:40~2:20
+                           <span className="font-bold text-gray-600">1~2학년</span> 1:20~2:00
                            <span className="mx-2 text-gray-300">|</span>
-                           <span className="font-bold text-gray-600">3~4학년</span> 2:30~3:10
+                           <span className="font-bold text-gray-600">3~4학년</span> 2:10~3:00
                         </span>
                     </>
                 )}
