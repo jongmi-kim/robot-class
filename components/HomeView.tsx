@@ -50,7 +50,7 @@ const HomeView: React.FC<HomeViewProps> = ({ setPage, selectedClass }) => {
         </div>
         
         {/* Robot Character Image */}
-        <div className="absolute bottom-0 right-4 w-56 md:w-96 lg:w-[32rem] z-10 transition-transform duration-500 group-hover:scale-105">
+        <div className="absolute bottom-0 right-4 w-56 md:w-96 lg:w-[32rem] z-30 md:z-10 pointer-events-none transition-transform duration-500 group-hover:scale-105">
           {/* Base Image (Legs/Original) */}
           <img 
             src="images/robot_character.png" 
