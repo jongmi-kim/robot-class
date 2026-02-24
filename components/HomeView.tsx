@@ -21,7 +21,7 @@ const HomeView: React.FC<HomeViewProps> = ({ setPage, selectedClass }) => {
     <div className="space-y-10">
       {/* Welcome Banner */}
       <div className="bg-navy-900 rounded-[2.5rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden group">
-        <div className="relative z-10 max-w-2xl">
+        <div className="relative z-20 max-w-2xl">
           <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 mb-6`}>
             <span className={`w-2 h-2 rounded-full animate-pulse ${isMW ? 'bg-brand-400' : 'bg-green-400'}`}></span>
             <span className={`text-sm font-bold ${isMW ? 'text-brand-100' : 'text-green-100'}`}>
@@ -48,46 +48,45 @@ const HomeView: React.FC<HomeViewProps> = ({ setPage, selectedClass }) => {
             일정 확인하기 <ArrowRight size={20} />
           </button>
         </div>
-        {/* 1. 기본 이미지 (다리 부분) */}
-<img 
-  src="images/robot_character.png" 
-  alt="로봇 캐릭터" 
- // 58-62라인
-className={`w-full h-full object-contain transition-all duration-500 ${
-  isMW 
-    ? 'drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]' 
-    : 'hue-rotate-[100deg] brightness-150 saturate-200 drop-shadow-[0_0_10px_rgba(57,255,20,0.6)]' 
-      // ▲ 여기가 화목반 코드입니다 (야광 초록 다리)
-}`}
-/>
-
-{/* 2. 덮어씌우는 이미지 (몸통/모자 - 마스크 처리됨) */}
-<img 
-  src="images/robot_character.png" 
-  alt="" 
-  // 69-73라인
-className={`absolute top-0 left-0 w-full h-full object-contain transition-all duration-500
-  ${isMW 
-    ? 'drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]' 
-    : 'hue-rotate-[85deg] brightness-115 saturate-140 drop-shadow-[0_0_15px_rgba(163,230,53,0.5)]'
-      // ▲ 여기가 화목반 코드입니다 (연두색 몸통)
-  }
-`}
-  style={{ 
-    // 하단부를 투명하게 처리하여 다리 부분은 아래 이미지가 보이도록 함
-    maskImage: 'linear-gradient(to bottom, black 45%, transparent 60%)',
-    WebkitMaskImage: 'linear-gradient(to bottom, black 45%, transparent 60%)'
-  }}
-/>
-
-{/* 3. 얼굴 화면 발광 효과 (후광) */}
-        <div className={`absolute top-[18%] left-[50%] -translate-x-[50%] w-[25%] h-[12%] rounded-full blur-lg mix-blend-screen pointer-events-none transition-all duration-500 ${
+        
+        {/* Robot Character Image */}
+        <div className="absolute bottom-0 right-4 w-56 md:w-96 lg:w-[32rem] z-10 transition-transform duration-500 group-hover:scale-105">
+          {/* Base Image (Legs/Original) */}
+          <img 
+            src="images/robot_character.png" 
+            alt="로봇 캐릭터" 
+            className={`w-full h-full object-contain transition-all duration-500 ${
+              isMW 
+                ? 'drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]' 
+                : 'hue-rotate-[100deg] brightness-150 saturate-200 drop-shadow-[0_0_10px_rgba(57,255,20,0.6)]'
+            }`}
+          />
+          
+          {/* Overlay Image (Body/Hat/Sign - Colored) */}
+          <img 
+            src="images/robot_character.png" 
+            alt="" 
+            className={`absolute top-0 left-0 w-full h-full object-contain transition-all duration-500
+              ${isMW 
+                ? 'drop-shadow-[0_0_15px_rgba(250,204,21,0.6)]' 
+                : 'hue-rotate-[85deg] brightness-115 saturate-140 drop-shadow-[0_0_15px_rgba(163,230,53,0.5)]'
+              }
+            `}
+            style={{ 
+              // Mask the bottom part to reveal original legs (Red legs)
+              maskImage: 'linear-gradient(to bottom, black 45%, transparent 60%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 45%, transparent 60%)'
+            }}
+          />
+          
+          {/* Face Screen Glow - Targeted Brightness (Reduced) */}
+          <div className={`absolute top-[18%] left-[50%] -translate-x-[50%] w-[25%] h-[12%] rounded-full blur-lg mix-blend-screen pointer-events-none transition-all duration-500 ${
             isMW 
               ? 'bg-yellow-200/50 shadow-[0_0_25px_rgba(250,204,21,0.6)]' 
               : 'bg-lime-200/50 shadow-[0_0_25px_rgba(163,230,53,0.6)]'
           }`}></div>
         </div>
-
+        
         {/* Decorative Circles */}
         <div className={`absolute top-0 right-0 w-96 h-96 rounded-full -mr-20 -mt-20 blur-3xl transition-all duration-1000 group-hover:opacity-70 opacity-30 ${isMW ? 'bg-brand-500' : 'bg-green-500'}`}></div>
         <div className={`absolute bottom-0 right-20 w-64 h-64 rounded-full blur-3xl opacity-20 ${isMW ? 'bg-accent-500' : 'bg-green-400'}`}></div>
