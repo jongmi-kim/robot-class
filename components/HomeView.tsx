@@ -48,6 +48,13 @@ const HomeView: React.FC<HomeViewProps> = ({ setPage, selectedClass }) => {
             일정 확인하기 <ArrowRight size={20} />
           </button>
         </div>
+        {/* Robot Character Image */}
+        <img 
+          src="images/robot_character.png" 
+          alt="로봇 캐릭터" 
+          className="absolute bottom-0 right-4 w-56 md:w-96 lg:w-[32rem] object-contain z-10 transition-transform duration-500 group-hover:scale-105"
+        />
+
         
         {/* Decorative Circles */}
         <div className={`absolute top-0 right-0 w-96 h-96 rounded-full -mr-20 -mt-20 blur-3xl transition-all duration-1000 group-hover:opacity-70 opacity-30 ${isMW ? 'bg-brand-500' : 'bg-green-500'}`}></div>
