@@ -11,7 +11,15 @@ import { Page, ClassType } from './types';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
-  const [selectedClass, setSelectedClass] = useState<ClassType>('MW');
+  const [selectedClass, setSelectedClass] = useState<ClassType>(() => {
+    // Check URL params for initial class selection
+    const params = new URLSearchParams(window.location.search);
+    const classParam = params.get('class');
+    if (classParam === 'MW' || classParam === 'TT') {
+      return classParam;
+    }
+    return 'MW';
+  });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Helper to get page title
