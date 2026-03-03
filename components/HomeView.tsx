@@ -91,7 +91,65 @@ const HomeView: React.FC<HomeViewProps> = ({ setPage, selectedClass }) => {
         <div className={`absolute top-0 right-0 w-96 h-96 rounded-full -mr-20 -mt-20 blur-3xl transition-all duration-1000 group-hover:opacity-70 opacity-30 ${isMW ? 'bg-brand-500' : 'bg-green-500'}`}></div>
         <div className={`absolute bottom-0 right-20 w-64 h-64 rounded-full blur-3xl opacity-20 ${isMW ? 'bg-accent-500' : 'bg-green-400'}`}></div>
       </div>
+     
+      {/* Notice Section */}
+      <div className="space-y-6">
+        <div className="flex items-center gap-2 px-2">
+          <span className="text-2xl">📢</span>
+          <h3 className="text-2xl font-bold text-navy-900">공지사항</h3>
+        </div>
+        
+        {/* Notice Images Layout */}
+        <div className={`rounded-[2.5rem] shadow-xl shadow-gray-200/50 border ${isMW ? 'bg-brand-50 border-brand-100' : 'bg-green-50 border-green-100'} p-4 md:p-6`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {/* Left Column: notice_1 */}
+            <div className="relative group">
+              <img 
+                src="/images/notice_1.png" 
+                alt="공지사항 1" 
+                className={`w-full h-auto object-contain rounded-2xl shadow-sm mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.02] border-4 ${isMW ? 'border-brand-400' : 'border-green-400'}`}
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className={`hidden flex flex-col items-center justify-center py-12 ${isMW ? 'text-brand-400' : 'text-green-400'} h-full bg-white/50 rounded-2xl border border-dashed ${isMW ? 'border-brand-400' : 'border-green-400'}`}>
+                <div className={`w-12 h-12 mb-2 rounded-full flex items-center justify-center ${isMW ? 'bg-brand-100 text-brand-400' : 'bg-green-100 text-green-400'}`}>
+                  <span className="text-2xl">🖼️</span>
+                </div>
+                <p className={`font-medium text-sm mb-1 ${isMW ? 'text-brand-600' : 'text-green-600'}`}>이미지 없음</p>
+                <p className="text-xs opacity-60 break-all px-2 text-center">notice_1.png</p>
+              </div>
+            </div>
 
+            {/* Right Column: notice_2 & notice_3 */}
+            <div className="flex flex-col gap-4 md:gap-6 h-full justify-between">
+              {['notice_2.png', 'notice_3.png'].map((img, index) => (
+                <div key={index} className="relative group">
+                  <img 
+                    src={`/images/${img}`} 
+                    alt={`공지사항 ${index + 2}`} 
+                    className={`w-full h-auto object-contain rounded-2xl shadow-sm mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.02] border-4 ${isMW ? 'border-brand-400' : 'border-green-400'}`}
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className={`hidden flex flex-col items-center justify-center py-12 ${isMW ? 'text-brand-400' : 'text-green-400'} h-full bg-white/50 rounded-2xl border border-dashed ${isMW ? 'border-brand-400' : 'border-green-400'}`}>
+                    <div className={`w-12 h-12 mb-2 rounded-full flex items-center justify-center ${isMW ? 'bg-brand-100 text-brand-400' : 'bg-green-100 text-green-400'}`}>
+                      <span className="text-2xl">🖼️</span>
+                    </div>
+                    <p className={`font-medium text-sm mb-1 ${isMW ? 'text-brand-600' : 'text-green-600'}`}>이미지 없음</p>
+                    <p className="text-xs opacity-60 break-all px-2 text-center">{img}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
       {/* Quick Actions Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <button 
